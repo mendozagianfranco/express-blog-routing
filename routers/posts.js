@@ -11,7 +11,9 @@ router.get('/', (req, res) => {
 // SHOW
 router.get('/:id', (req, res) => {
     const { id } = req.params;
-    res.send('Dettagli post ' + id);
+    // res.send('Dettagli post ' + id);
+    const currentPost = posts.find((post) => post.slug === id);
+    res.json(currentPost);
 });
 
 // STORE
