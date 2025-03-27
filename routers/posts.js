@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const posts = require('../data/posts');
 
 // INDEX
 router.get('/', (req, res) => {
-    res.send('Lista post');
+    // res.send('Lista post');
+    res.json(posts);
 });
 
 // SHOW
